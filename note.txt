@@ -1,0 +1,3 @@
+npm i redux-thunk
+npm i sweetalert2
+npm i react-loader-spinner
