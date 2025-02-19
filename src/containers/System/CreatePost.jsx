@@ -128,12 +128,12 @@ const CreatePost = ({isEdit}) => {
                             </div>
                             <small className='text-red-500'>{invalideFields?.find(item => item.name === 'images')?.message}</small>
                         </div>
-                        <Button text={isEdit ? 'Cập nhật' : 'Tạo mới'} bgColor='bg-green-500 text-white uppercase' fullWidth='100%' onClick={handleSubmit}/>
+                        <Button text={isEdit ? 'Cập nhật' : 'Tạo mới'} bgColor='bg-green-500 text-white uppercase py-2 px-1' fullWidth='100%' onClick={handleSubmit}/>
                         <div className='h-[500px]'></div>
                     </div>
                 </div>
-                <div className='w-1/3 py-4 flex-none'>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d71988.36670315915!2d106.63302345195835!3d10.783747031859436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3f3129e64d%3A0x8d6b2d79522c7f30!2zQ2jhu6MgQuG6v24gVGjDoG5o!5e0!3m2!1svi!2s!4v1738914577990!5m2!1svi!2s" width={400} height={400} style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+                <div className='w-1/3 py-4 flex-none hidden md:block'>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d71988.36670315915!2d106.63302345195835!3d10.783747031859436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3f3129e64d%3A0x8d6b2d79522c7f30!2zQ2jhu6MgQuG6v24gVGjDoG5o!5e0!3m2!1svi!2s!4v1738914577990!5m2!1svi!2s" width={400} height={400} style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
                 </div>
             </div>
             <ToastContainer />

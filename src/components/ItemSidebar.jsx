@@ -28,14 +28,14 @@ const ItemSidebar = ({categories,title,prices,areas}) => {
     }
     return (
         <div className='p-4 rounded-md bg-white w-full'>
-            <h3 className='text-md font-semibold mb-3'>{title}</h3>
+            <h3 className='font-semibold mb-3 text-sm text-center md:text-lg'>{title}</h3>
             <div className='flex'>
                 <div className='flex flex-col items-start justify-center w-full gap-1'>
                         {categories?.map((item,index) => (
                             <Link to={formatVietnameseToString(item.value)} className='flex items-center justify-between w-full hover:text-orange-600 border-b-2 pb-2 border-dashed' key={index}>
                                 <div className='flex items-center '>
                                     <GrNext size={14} color='#888' className='pt-1 '/>
-                                    <p className=''>{item.value}</p>
+                                    <p className='text-sm md:text-base text-center'>{item.value}</p>
                                 </div>
                             </Link>
                         ))}
@@ -46,7 +46,7 @@ const ItemSidebar = ({categories,title,prices,areas}) => {
                                 className='flex items-center justify-between w-full hover:text-orange-600 border-b-2 pb-2 border-dashed cursor-pointer' key={index}>
                                 <div className='flex items-center '>
                                     <GrNext size={14} color='#888' className='pt-1 '/>
-                                    <p className=''>{item.value}</p>
+                                    <p className='text-sm md:text-base text-center'>{item.value}</p>
                                 </div>
                             </div>
                         ))}
@@ -57,7 +57,7 @@ const ItemSidebar = ({categories,title,prices,areas}) => {
                                 className='flex items-center justify-between w-full hover:text-orange-600 border-b-2 pb-2 border-dashed cursor-pointer' key={index}>
                                 <div className='flex items-center '>
                                     <GrNext size={14} color='#888' className='pt-1 '/>
-                                    <p className=''>{item.value}</p>
+                                    <p className='text-sm md:text-base text-center'>{item.value}</p>
                                 </div>
                             </div>
                         ))}

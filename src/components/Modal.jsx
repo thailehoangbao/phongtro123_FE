@@ -93,7 +93,7 @@ const Modal = ({setIsShowModal,content,name,handleSubmit,queries,arrMinMax,defau
                     e.stopPropagation()
                     setIsShowModal(true)
                 }} 
-                className='w-2/5 bg-white rounded-md h-[370px] relative'>
+                className='md:w-2/5 w-full bg-white rounded-md h-[370px] relative m-2 md:m-0'>
                 <div className='h-[45px] flex items-center px-4 border-b border-gray-200'>
                     <span className='hover:text-red-500 cursor-pointer'
                         onClick={(e) =>{
@@ -117,7 +117,7 @@ const Modal = ({setIsShowModal,content,name,handleSubmit,queries,arrMinMax,defau
                     )))}
                 </div>} */}
                 {(name === 'category' || name === 'province') && (
-                    <div className="p-4 flex flex-col max-h-80 overflow-y-auto ">
+                    <div className="p-4 flex flex-col max-h-80 overflow-y-auto">
                         <span className="py-2 flex gap-2 items-center border-b border-gray-200">
                         <input
                             defaultChecked={!queries[`${name}Code`] ? true : false}
@@ -143,16 +143,16 @@ const Modal = ({setIsShowModal,content,name,handleSubmit,queries,arrMinMax,defau
                         </span>
                         ))}
                     </div>
-                    )}
+                )}
 
                 {(name === 'price' || name === 'area') && <div className={`px-8 py-12 ${name === 'price' ? 'h-[320px]' : 'h-[280px]'}`}>
                     <div className='flex items-center justify-center flex-col relative'>
-                        <div className='z-30 absolute top-[-40px] text-orange-600 font-semibold text-lg'>
+                        <div className='z-30 absolute top-[-40px] text-orange-600 font-semibold'>
                             {(persent1 === 100 && persent2 === 100) ? `Trên ${convert100toTarget(persent1)} ${name === 'price' ? 'triệu' : 'm2'} +` 
                                 : `Từ ${persent1 >= persent2 ? convert100toTarget(persent2): convert100toTarget(persent1)} - ${persent2 >= persent1 ? convert100toTarget(persent2) : convert100toTarget(persent1)} ${name === 'price' ? 'triệu' : 'm2'} +`
                             }
                         </div>
-                        <div onClick={handleClickTrack} id='track' className='slider-track h-[5px] bg-gray-300 w-full absolute top-0 bottom-0'></div>
+                        <div onClick={handleClickTrack} id='track' className='slider-track md:h-[5px] bg-gray-300 w-full absolute top-0 bottom-0'></div>
                         <div onClick={handleClickTrack} id='track-active' className='slider-track-active h-[5px] bg-orange-600 absolute top-0 bottom-0'></div>
                         <input type="range" max='100' min='0' step='5' className='w-full appearance-none pointer-events-none absolute top-0 bottom-0' value={persent1} 
                             onChange={(e) => {

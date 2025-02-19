@@ -2,16 +2,16 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <div className="bg-yellow-200 w-full px-36 py-8">
+        <div className="bg-yellow-200 w-full md:px-36 px-4 md:py-8 py-2">
         <div className="flex justify-between " bis_skin_checked={1}>
             <div className="col-sm-6 col-md-3" bis_skin_checked={1}>
             <div
-                className="uppercase mb-2 font-semibold mt-4"
+                className="uppercase text-sm md:text-lg text-center mb-2 font-semibold mt-4"
                 bis_skin_checked={1}
             >
                 Về phongtro123.com
             </div>
-            <ul>
+            <ul  className="px-2 py-1 md:px-0 md:py-0">
                 <li>
                 <a
                     className="d-block text-link-body pt-1 pb-1"
@@ -61,12 +61,12 @@ const Footer = () => {
             </div>
             <div className="col-sm-6 col-md-3 mt-4 mt-sm-0" bis_skin_checked={1}>
             <div
-                className="mb-2 uppercase font-semibold"
+                className="mb-2 uppercase text-sm md:text-lg text-center font-semibold"
                 bis_skin_checked={1}
             >
                 Dành cho khách hàng
             </div>
-            <ul>
+            <ul className="px-2 py-1 md:px-0 md:py-0">
                 <li>
                 <a
                     className="d-block text-link-body pt-1 pb-1"
@@ -118,7 +118,7 @@ const Footer = () => {
             <div className="col-sm-6 col-md-3 mt-4 mt-md-0" bis_skin_checked={1}>
             <div className="box__payment__menthod" bis_skin_checked={1}>
                 <div
-                className="font-semibold fs-6 mb-3 uppercase"
+                className="font-semibold fs-6 mb-3 uppercase text-sm md:text-lg text-center"
                 bis_skin_checked={1}
                 >
                 Phương thức thanh toán
@@ -134,7 +134,7 @@ const Footer = () => {
             <div className="col-sm-6 col-md-3 mt-4 mt-md-0" bis_skin_checked={1}>
             <div bis_skin_checked={1}>
                 <div
-                className="font-semibold fs-6 mb-3 uppercase"
+                className="font-semibold fs-6 mb-3 uppercase text-sm md:text-lg text-center"
                 bis_skin_checked={1}
                 >
                 Theo dõi Phongtro123.com
@@ -192,7 +192,7 @@ const Footer = () => {
             className="fs-10 border-top border-secondary pt-4 pb-4 mt-4 "
             bis_skin_checked={1}
         >
-            <p className="fw-semibold fs-6 mb-2 text-uppercase">
+            <p className="fw-semibold fs-6 mb-2 text-uppercase text-sm md:text-lg text-center">
             CÔNG TY TNHH LBKCORP
             </p>
             <p className="mb-1">

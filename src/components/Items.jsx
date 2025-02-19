@@ -14,7 +14,7 @@ const Items = ({item}) => {
     const imgs = JSON.parse(item?.images.image)
     return (
         <div className="w-full flex flex-col lg:flex-row justify-center p-1 border-t border-orange-600">
-            <div className="lg:w-2/5 w-full flex justify-center items-center">
+            <div className="lg:w-2/5 w-full flex justify-center items-center mt-2 md:mt-0">
                 <Link to={`${path.DETAIL}${formatVietnameseToString(item?.title?.replaceAll('/',''))}/${item?.id}}`} className="p-1 border bg-slate-100 lg:justify-center shadow-md rounded-md cursor-pointer" >
                     <div className="flex gap-1">
                         <img
@@ -47,11 +47,10 @@ const Items = ({item}) => {
                     </div>
                 </Link>
             </div>
-            <div className="lg:w-3/5 w-full">
-                <div>
+            <div className="lg:w-3/5 w-full pb-2 md:pb-0">
+                <div className="p-5 md:p-0">
                     <div className="flex items-center justify-between w-full">
                         <Link className="text-red-600 text-sm font-semibold">
-                            <FaStar className="star-item pb-1" size={18} color="yellow"/>
                             <StarComponent x={item?.star}/>
                             {item?.title}
                         </Link>
@@ -60,22 +59,22 @@ const Items = ({item}) => {
                         </div>
                     </div>
                     <div className="my-2">
-                        <span className="font-bold text-[16px] pr-2 text-green-600">{item?.attributes.price}</span>
-                        <span className="text-[16px] pr-2">{item?.attributes.acreage}</span>
-                        <span className="text-[16px] italic">{formatText(item?.address,15)}</span>
+                        <span className="font-bold text-[16px] pr-2 text-green-600 text-sm md:text-lg">{item?.attributes.price}</span>
+                        <span className="text-[16px] pr-2 text-sm md:text-lg">{item?.attributes.acreage}</span>
+                        <span className="text-[16px] italic text-sm md:text-lg">{formatText(item?.address,15)}</span>
                     </div>
                     <div className="flex justify-end">
                         <span className="text-sm italic">3 giờ trước</span>
                     </div>
-                    <p className="text-gray-500">{formatText(item?.description,50)}...</p>
+                    <p className="text-gray-500 text-sm md:text-lg">{formatText(item?.description,50)}...</p>
                     <div className="flex justify-between py-2">
-                        <div className="flex items-center">
-                            <img src={avatar} alt="avatar" className="object-cover border-r-[50%] opacity-80 w-[25px] h-[25px]"/>
-                            <span className="text-sm font-semibold">{item?.user.name}</span>
+                        <div className="flex items-center md:w-[150px] w-[100px]">
+                            <div className="flex items-center justify-center"><img src={avatar} alt="avatar" className="object-cover border-r-[50%] opacity-80 w-[40px] h-[40px] md:w-[30px] md:h-[30px] md:mr-2"/></div>
+                            <span className="text-xs md:text-sm font-semibold hidden md:inline">{item?.user.name}</span>
                         </div>
-                        <div className="flex gap-2 h-[30px]">
-                            <button className="bg-blue-600 text-white rounded-lg px-2 py-1 cursor-pointer hover:opacity-90 text-sm">{item?.user.phone}</button>
-                            <button className="bg-white text-blue-600 rounded-lg border border-blue-600 cursor-pointer hover:opacity-90 text-sm px-2 py-1 " >{item?.user.zalo}</button>
+                        <div className="gap-2 h-[30px] flex-col md:flex-none ">
+                            <button className="bg-blue-600 text-white rounded-lg px-2 py-1 cursor-pointer hover:opacity-90 text-sm mb-2 md:mb-0">{item?.user.phone}</button>
+                            <button className="bg-white text-blue-600 rounded-lg border border-blue-600 cursor-pointer hover:opacity-90 text-xs md:text-sm px-2 py-1 md:ml-1" >{item?.user.zalo}</button>
                         </div>
                     </div>
                 </div>

@@ -27,7 +27,7 @@ const Login = () => {
     },[isLoggedIn])
 
     useEffect(() => {
-        msg && Swal.fire('Oops !', msg, 'error')
+        msg && Swal.fire('Lỗi rồi bạn ơi!', msg, 'Lỗi rồi bạn ơi!')
     },[msg])
 
     const handleSubmit = async () => {
@@ -36,13 +36,13 @@ const Login = () => {
             password: payload.password
         }
         let isvalids = validate(finalPayload,setInvalidFields)
-        if(isvalids == 0) {
+        if(isvalids === 0) {
             isRegister ? dispatch(actions.register(finalPayload)) : dispatch(actions.login(finalPayload))
         }
     }
 
     return (
-        <div className='bg-white mw-600 w-[600px] p-[30px] pb-[100px] rounded-md shadow-sm'>
+        <div className='bg-white mw-600 w-[600px] p-[100px] md:p-[30px] pb-[100px] rounded-md shadow-sm'>
             <h3 className='font-semibold text-2xl mb-3'>{isRegister ? "Đăng ký tài khoản" : "Đăng nhập"}</h3>
             <div className='w-full flex flex-col gap-3'>
                 {isRegister && <InputForm invalidFields={invalidFields} setInvalidFields={setInvalidFields}   text="HỌ TÊN" value={payload.name} setValue={setPayload} type="name"/>}
@@ -52,7 +52,7 @@ const Login = () => {
             <Button 
                 text={isRegister ? "Đăng ký" : "Đăng nhập"}
                 textColor='text-white'
-                bgColor='bg-secondary1 mt-4'
+                bgColor='bg-secondary1 mt-4 py-2 px-1'
                 fullWidth
                 onClick={handleSubmit}
             />

@@ -67,7 +67,7 @@ const Search = () => {
             text={queries.category || "Tìm tất cả"}
             IconAfter={FiDelete}
             IconBefore={FaHouse}
-            width="lg:w-[200px] w-[400px]"
+            width="lg:w-[200px] w-[400px] text-xs md:text-base"
           />
         </div>
         <div onClick={() =>handleShowModal(provinces, 'province',"Toàn quốc")} className="cursor-pointer flex-auto">
@@ -75,7 +75,7 @@ const Search = () => {
             text={queries.province || "Toàn quốc"}
             IconAfter={GrNext}
             IconBefore={FaLocationDot}
-            color={"text-gray-400"}
+            color={"text-gray-400 text-xs md:text-base"}
             width="lg:w-[250px] w-[400px] text-sm"
           />
         </div>
@@ -84,7 +84,7 @@ const Search = () => {
             text={queries.price || "Chọn giá"}
             IconAfter={GrNext}
             IconBefore={IoIosPricetags}
-            color={"text-gray-400"}
+            color={"text-gray-400 text-xs md:text-base"}
             width="lg:w-[200px] w-[400px]"
           />
         </div>
@@ -93,7 +93,7 @@ const Search = () => {
             text={queries.area || "Diện tích"}
             IconAfter={GrNext}
             IconBefore={CiSquareMore}
-            color={"text-gray-400 text-sm"}
+            color={"text-gray-400 text-xs md:text-base"}
             width="lg:w-[180px] w-[400px]"
           />
         </div>

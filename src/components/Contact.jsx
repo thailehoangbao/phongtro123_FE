@@ -8,15 +8,15 @@ const Contact = () => {
       <p className='py-2'>{text.content}</p>
       <div className='flex justify-between items-center'>
         {text.contacts.map((item,index) => (
-            <div className='flex flex-col' key={index}>
-              <span className='font-medium text-lg text-orange-500'>{item.name}</span>
-              <span className='text-blue-500 font-semibold'>Phone: {item.phone}</span>
-              <span className='text-blue-500 font-semibold'>Zalo: {item.zalo}</span>
+            <div className='flex flex-col gap-1 md:gap-0' key={index}>
+              <span className='font-medium text-sm md:text-lg text-orange-500 '>{item.name}</span>
+              <span className='text-blue-500 text-sm md:text-lg font-semibold'>Phone: {item.phone}</span>
+              <span className='text-blue-500 text-sm md:text-lg font-semibold'>Zalo: {item.zalo}</span>
             </div>
         ))}
       </div>
       <div className='flex justify-center py-4'>
-        <Button text={'Gửi liên hệ'} bgColor={'bg-blue-600'} textColor={'text-white px-6'}/>
+        <Button text={'Gửi liên hệ'} bgColor={'bg-blue-600 w-full md:w-fit uppercase py-2 px-1'} textColor={'text-white px-6'}/>
       </div>
     </div>
   )

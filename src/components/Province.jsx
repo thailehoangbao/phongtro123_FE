@@ -4,7 +4,7 @@ import ProvinceButton from './ProvinceButton'
 
 const Province = () => {
     return (
-        <div className='py-5 flex justify-center gap-3'>
+        <div className='py-5 flex justify-center gap-3 p-2'>
             {location.map((item,index) => (
                 <ProvinceButton key={index} name={item.name} image={item.image}/>
             ))}

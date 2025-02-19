@@ -25,8 +25,8 @@ const Intro = () => {
         {text.statistical?.map((item,index) => {
           return (
             <div className='flex flex-col justify-center items-center' key={index}>
-                <h4 className='font-semibold text-lg'>{item.value}</h4>
-                <p className='text-gray-600'>{item.name}</p>
+                <h4 className='font-semibold text-sm md:text-lg'>{item.value}</h4>
+                <p className='text-gray-600 text-sm '>{item.name}</p>
             </div>
           )
         })}
@@ -43,7 +43,7 @@ const Intro = () => {
       <span className='text-gray-600'>{text.author}</span>
       <h3 className='font-semibold text-lg p-2'>{text.question}</h3>
       <p className='text-gray-600'>{text.answer}</p>
-      <Button text={'Đăng ký ngay'} bgColor='bg-secondary2' textColor='text-white'>Tin đăng ngay</Button>
+      <Button text={'Đăng ký ngay'} bgColor='bg-secondary2 w-full md:w-fit py-2 px-1 uppercase' textColor='text-white'>Tin đăng ngay</Button>
     </div>
   )
 }

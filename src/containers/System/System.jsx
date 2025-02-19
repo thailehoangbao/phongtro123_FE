@@ -10,7 +10,7 @@ const System = () => {
     return (
         <div className='w-full flex flex-col items-center h-screen overflow-hidden'>
             <Header />
-            <div className='flex w-full h-screen'>
+            <div className='flex-col md:flex-row flex w-full h-screen'>
                 <Sidebar />
                 <div className='flex-auto bg-white shadow-md p-4 overflow-y-scroll'>
                     <Outlet />

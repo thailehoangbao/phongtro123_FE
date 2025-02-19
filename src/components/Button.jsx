@@ -7,7 +7,7 @@ const Button = ({text,textColor,bgColor,IconAfter,onClick,fullWidth,IconBefore})
     return (
         <button
             type='button'
-            className={`py-2 px-4 ${textColor} ${fullWidth && 'w-full'} ${bgColor} outline-none rounded-md hover:underline flex items-center justify-center gap-1`}
+            className={`md:py-2 md:px-4 ${textColor} ${fullWidth && 'w-full'} ${bgColor} outline-none rounded-md hover:underline flex items-center justify-center gap-1`}
             onClick={onClick}
         >
             <span>{IconBefore && <IconBefore />}</span>
